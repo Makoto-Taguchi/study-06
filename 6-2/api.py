@@ -14,9 +14,12 @@ def get_api():
         }
     result = requests.get(url, params=payload)
     resp = result.json()
+    return resp
 
+def main():
+    repsonse = get_api()
     counter = 0
-    for i in resp['Items']:
+    for i in repsonse['Items']:
         counter = counter + 1
         # Jsonの出力形式に従い、Itemsの中のi番目のItemの内容を取得
         item = i['Item']
@@ -27,8 +30,4 @@ def get_api():
         print('【URL】',item['itemUrl'])
         print('【text】', item['itemCaption'])
 
-get_api()
-
-# def main():
-
-# main()
+main()
