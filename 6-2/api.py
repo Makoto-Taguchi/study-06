@@ -3,7 +3,7 @@ import urllib
 
 
 def get_api():
-    serch_keyword = '鬼滅"'
+    serch_keyword = input("検索ワードを入力してください：")
     APP_ID = '1005312593107358367'
     url = 'https://app.rakuten.co.jp/services/api/IchibaItem/Search/20170706'
     payload = {
