@@ -23,9 +23,9 @@ def main():
         # Jsonの出力形式に従い、Productsの中のi番目のProductの内容を取得
         product = i['Product']
         name = product['productName']
-        print('【No.】'+ str(counter))
-        print('【Name】' + str(name[:30]) + '...')
-        print('【URL】',product['productUrlPC'])
-        print('【MaxPrice】' + '¥' +str(product['maxPrice']))
-        print('【minPrice】' + '¥' +str(product['minPrice']))
+        print(f"【No.】{str(counter)}")
+        print(f"【Name】{str(name[:30])}...")
+        print(f"【URL】{product['productUrlPC']}")
+        print(f"【MaxPrice】¥{str(product['maxPrice'])}")
+        print(f"【minPrice】¥{str(product['minPrice'])}")
 main()

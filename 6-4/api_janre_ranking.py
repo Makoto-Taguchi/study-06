@@ -33,11 +33,11 @@ def main():
         # Jsonの出力形式に従い、Itemsの中のi番目のItemの内容を取得
         item = i['Item']
         name = item['itemName']
-        print('【No.】'+ str(counter))
-        print('【Name】' + str(name) + '...')
-        print('【Price】' + '¥' +str(item['itemPrice']))
-        print('【URL】',item['itemUrl'])
-        f.write(str(counter)+','+str(name)+','+str(item['itemPrice'])+','+item['itemUrl']+'\n')
+        print(f"【No.】{str(counter)} ")
+        print(f"【Name】{str(name)} ...")
+        print(f"【Price】¥{str(item['itemPrice'])}")
+        print(f"【URL】{item['itemUrl']}")
+        f.write(f"{str(counter)},{str(name)},{str(item['itemPrice'])},{item['itemUrl']} \n")
         # print('【text】', item['itemCaption'])
 
 main()

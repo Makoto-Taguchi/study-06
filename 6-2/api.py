@@ -24,10 +24,10 @@ def main():
         # Jsonの出力形式に従い、Itemsの中のi番目のItemの内容を取得
         item = i['Item']
         name = item['itemName']
-        print('【No.】'+ str(counter))
-        print('【Name】' + str(name[:30]) + '...')
-        print('【Price】' + '¥' +str(item['itemPrice']))
-        print('【URL】',item['itemUrl'])
-        print('【text】', item['itemCaption'])
+        print(f"【No.】{str(counter)}")
+        print(f"【Name】{str(name[:30])}...")
+        print(f"【Price】¥{str(item['itemPrice'])}")
+        print(f"【URL】{item['itemUrl']}")
+        print(f"【text】{item['itemCaption']}")
 
 main()
